@@ -1,0 +1,25 @@
+{
+  "name": "ng-workshop",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cironunes/ng-workshop",
+  "authors": [
+    "Demian Borba",
+    "Ciro Nunes"
+  ],
+  "description": "ng-workshop presented by Ciro Nunes and Demian Borba at Webbr Sao Paulo",
+  "main": "index.html",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.25"
+  }
+}

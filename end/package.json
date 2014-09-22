@@ -1,0 +1,19 @@
+{
+  "name": "ng-workshop",
+  "version": "0.0.1",
+  "description": "ng-workshop presented by Ciro Nunes and Demian Borba at Webbr Sao Paulo",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cironunes/ng-workshop.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Demian Borba, Ciro Nunes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cironunes/ng-workshop/issues"
+  },
+  "homepage": "https://github.com/cironunes/ng-workshop"
+}

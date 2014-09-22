@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ng-workshop</title>
+</head>
+
+<body ng-app="app">
+
+    <div ng-controller="MainCtrl">
+
+        <h1>Coisas que estou querendo comprar!</h1>
+
+        <h2>Buscar Item</h2>
+        <input type="text" placeholder="Nome" ng-model="busca.name">
+        
+        <hr>
+        
+        <div>
+            <button ng-show="!isAddingItem" ng-click="isAddingItem = !isAddingItem">Adicionar Item</button>
+            <button ng-show="isAddingItem" ng-click="isAddingItem = !isAddingItem">Cancelar Adicionar Item</button>
+        </div>
+
+        <form ng-submit="addItem()" ng-show="isAddingItem">
+            <h2>Adicionar Item</h2>
+            <input type="text" ng-model="add.name" placeholder="Nome do Item" required>
+            <input type="text" ng-model="add.photo" placeholder="Foto, ex: foto.jpg" required>
+            <input type="text" ng-model="add.price" placeholder="Preço, ex: 110" required>
+            <input type="text" ng-model="add.description" placeholder="Descrição do Item" required>
+            <input type="text" ng-model="add.priority" placeholder="Prioridade, ex: Alta" required>
+            <button type="submit">Adicionar Item</button>
+        </form>
+
+        <form ng-submit="confirmEditingItem()" ng-show="isEditingItem">
+            <h2>Editar Item</h2>
+            <input type="text" ng-value="edit.name" ng-model="edit.name">
+            <input type="text" ng-value="edit.photo" ng-model="edit.photo">
+            <input type="text" ng-value="edit.price" ng-model="edit.price">
+            <input type="text" ng-value="edit.description" ng-model="edit.description">
+            <input type="text" ng-value="edit.priority" ng-model="edit.priority">
+            <button type="submit">Editar Item</button>
+        </form>
+        
+        <hr>
+        
+        <ul>
+            <li ng-repeat="item in items | filter:busca track by $index">
+                <h2>{{item.name}}</h2>
+                <img ng-src="img/{{item.photo}}" width="100">
+                <br>
+                <p>Preço: <strong>{{item.price | currency}}</strong> Prioridade: {{item.priority}}</p>
+                <p>Descrição: {{item.description}}</p>
+                <button ng-click="startEditingItem($index)">Editar Item</button>
+                <button ng-click="deleteItem($index)">Excluir Item</button>
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
