@@ -1,0 +1,22 @@
+{
+  "name": "ng-workshop",
+  "version": "0.0.0",
+  "description": "Workshop por Ciro Nunes e Demian Borba no Webbr em São Paulo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cironunes/ng-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cironunes/ng-workshop/issues"
+  },
+  "homepage": "https://github.com/cironunes/ng-workshop",
+  "devDependencies": {
+    "angular-hint": "0.0.0"
+  }
+}

@@ -20,6 +20,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.25"
+    "angular": "~1.2.25",
+    "pure": "~0.5.0",
+    "angular-route": "~1.2.25",
+    "fontawesome": "~4.2.0"
   }
 }

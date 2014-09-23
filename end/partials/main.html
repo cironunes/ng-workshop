@@ -1,0 +1,55 @@
+<form class="pure-form">
+  <input class="pure-input-rounded" type="text" placeholder="What are you looking for?" ng-model="searchText.name">
+</form>
+
+<form class="pure-form" ng-submit="addItem()">
+  <h2>Adicionar Item</h2>
+
+  <input type="text" ng-model="item.name" placeholder="Name" required>
+  <input type="number" ng-model="item.price" placeholder="Price" required>
+
+  <select ng-model="item.priority">
+    <option value="">-- select the priority --</option>
+    <option ng-repeat="priority in priorities" value="{{ priority }}">{{ priority }}</option>
+  </select>
+
+  <button class="pure-button pure-button-primary">
+    <i class="fa fa-plus"></i>
+  </button>
+</form>
+
+<hr>
+
+<!-- 1. listing -->
+<table class="pure-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Product</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 2. search -->
+    <tr ng-repeat="item in items | filter:searchText track by $index">
+    <!-- /2. search -->
+      <td>{{ $index + 1 }}</td>
+      <td>
+        <img class="pure-img" width="150" ng-src="{{ item.photo }}">
+        <h2>{{ item.name }}</h2>
+      </td>
+      <td>{{ item.price }}</td>
+      <td>
+        <button class="pure-button" ng-click="edit(item.id)">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="pure-button" ng-click="remove(item.id)">
+          <i class="fa fa-times"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+<!-- /1. listing -->
