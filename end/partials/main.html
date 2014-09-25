@@ -1,5 +1,4 @@
 <form class="pure-form" ng-submit="addItem()">
-  <h2 class="hidden">Adicionar Item</h2>
 
   <input type="text" ng-model="item.name" placeholder="Name" required>
   <input type="number" ng-model="item.price" placeholder="Price" required>
@@ -8,21 +7,22 @@
   </button>
 </form>
 
-<hr>
+<br>
 
 <!-- 1. listing -->
-<table class="pure-table">
+<table id="main-table" class="pure-table">
   <thead>
     <tr>
-      <th>#</th>
-      <th>Product</th>
-      <th>Price</th>
-      <th>
+      <th id="main-table-id-col">#</th>
+      <th id="main-table-product-col">
         <!-- 2. search -->
         <form class="pure-form">
-          <input class="pure-input-rounded" type="text" placeholder="What are you looking for?" ng-model="searchText.name">
+            Product
+            <input class="pure-input-rounded" type="text" placeholder="What are you looking for?" ng-model="searchText.name">
         </form>
-        <!-- /2. search -->
+        <!-- /2. search --></th>
+      <th>Price</th>
+      <th>
       </th>
     </tr>
   </thead>

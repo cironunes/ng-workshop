@@ -1,10 +1,63 @@
-.wrapper {
-  max-width: 660px;
-  margin: 0 auto;
+html,
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-overflow-style: none;
+    overflow: hidden;
+    cursor: default;
 }
-
-.hidden {
-  position: absolute;
-  visibility: hidden;
+input,
+textarea {
+    user-select: text;
 }
-
+#background-computer {
+    position: absolute;
+    background: url(../img/computer.svg);
+    width: 936px;
+    height: 752px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    background-size: contain;
+}
+#wrapper {
+    position: absolute;
+    width: 826px;
+    height: 489px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 34px;
+    margin-left: 33px;
+    padding-right: 20px;
+    padding-left: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+}
+#main-table {
+    width: 100%;
+    text-align: center;
+}
+table th {
+    vertical-align: middle;
+    text-align: center;
+}
+#main-table-id-col {
+    width: 30px;
+    vertical-align: middle;
+}
+#main-table-product-col {
+    width: 480px;
+    vertical-align: middle;
+}
