@@ -29,7 +29,7 @@
   </thead>
   <tbody>
     <!-- 2. search -->
-    <tr ng-repeat="item in items | filter:searchText track by $index">
+    <tr ng-repeat="item in items | filter:searchText | orderBy: '-id'">
     <!-- /2. search -->
       <td>{{ $index + 1 }}</td>
       <td id="main-table-product-col">
