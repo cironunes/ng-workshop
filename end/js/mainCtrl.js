@@ -6,13 +6,7 @@ angular.module('wannaBuy')
     $scope.priorities = wbItems.getPriorities();
 
     $scope.addItem = function () {
-      var newItem = {
-        name: $scope.item.name,
-        price: $scope.item.price,
-        priority: $scope.item.priority
-      };
-
-      wbItems.addItem(newItem);
+      wbItems.addItem($scope.item);
     };
 
     $scope.edit = function (id) {
