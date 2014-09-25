@@ -16,15 +16,13 @@
     <input type="text" ng-model="item.photo">
   </label>
 
-  <label>
-    Priority:
-    <select ng-model="item.priority">
-      <option value="">-- select the priority --</option>
-      <option ng-repeat="priority in priorities" value="{{ priority }}">{{ priority }}</option>
-    </select>
-  </label>
+  <hr>
 
-  <button class="pure-button" type="submit">Save</button>
-  <button class="pure-button" ng-click="remove()">x</button>
+  <button class="pure-button" type="submit">
+    <i class="fa fa-check"></i>
+  </button>
+  <button class="pure-button" ng-click="remove()">
+    <i class="fa fa-times"></i>
+  </button>
 </form>
 
