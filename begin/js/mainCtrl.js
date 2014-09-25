@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('wannaBuy')
-  .controller('MainCtrl', function ($scope, $location, wbItems) {
+  .controller('MainCtrl', function ($scope) {
     $scope.items = [];
 
     $scope.addItem = function () {
