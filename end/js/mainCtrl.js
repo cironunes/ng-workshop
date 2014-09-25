@@ -3,7 +3,6 @@
 angular.module('wannaBuy')
   .controller('MainCtrl', function ($scope, $location, wbItems) {
     $scope.items = wbItems.getItems();
-    $scope.priorities = wbItems.getPriorities();
 
     $scope.addItem = function () {
       wbItems.addItem($scope.item);
