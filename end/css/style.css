@@ -1,0 +1,10 @@
+.wrapper {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
