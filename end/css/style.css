@@ -12,10 +12,12 @@ body {
     overflow: hidden;
     cursor: default;
 }
+
 input,
 textarea {
     user-select: text;
 }
+
 #background-computer {
     position: absolute;
     background: url(../img/computer.svg);
@@ -29,7 +31,8 @@ textarea {
     display: block;
     background-size: contain;
 }
-#wrapper {
+
+.container {
     position: absolute;
     width: 826px;
     height: 489px;
@@ -43,21 +46,69 @@ textarea {
     padding-left: 20px;
     overflow-x: hidden;
     overflow-y: auto;
-    text-align: center;
 }
-#main-table {
+
+
+.wrapper {
+  text-align: center;
+}
+
+.align-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.product-name {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.product-image {
+  margin-right: 10px;
+}
+
+.form-add input[type="text"].input,
+.form-add input[type="number"].input {
+  padding: 20px 10px;
+}
+
+.form-add .pure-button-primary {
+  padding: 20px;
+}
+
+.input-product {
+  width: 564px;
+}
+
+.input-price {
+  width: 200px;
+}
+
+.form-edit {
+  width: 230px;
+  margin: 0 auto;
+}
+
+.table {
     width: 100%;
-    text-align: center;
 }
-table th {
+
+.table th {
     vertical-align: middle;
     text-align: center;
 }
+
 #main-table-id-col {
     width: 30px;
     vertical-align: middle;
 }
+
 #main-table-product-col {
     width: 480px;
     vertical-align: middle;
+    text-align: left;
 }

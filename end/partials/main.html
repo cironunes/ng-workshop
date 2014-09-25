@@ -1,16 +1,17 @@
-<form class="pure-form" ng-submit="addItem()">
-
-  <input type="text" ng-model="item.name" placeholder="Name" required>
-  <input type="number" ng-model="item.price" placeholder="Price" required>
-  <button class="pure-button pure-button-primary">
-    <i class="fa fa-plus"></i>
-  </button>
+<form class="pure-form form-add" ng-submit="addItem()">
+  <div class="wrapper">
+    <input type="text" class="input input-product" ng-model="item.name" placeholder="Name" required>
+    <input type="number" class="input input-price" ng-model="item.price" placeholder="Price" required>
+    <button class="pure-button pure-button-primary">
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
 </form>
 
 <br>
 
 <!-- 1. listing -->
-<table id="main-table" class="pure-table">
+<table class="pure-table pure-table-striped table">
   <thead>
     <tr>
       <th id="main-table-id-col">#</th>
@@ -31,12 +32,12 @@
     <tr ng-repeat="item in items | filter:searchText track by $index">
     <!-- /2. search -->
       <td>{{ $index + 1 }}</td>
-      <td>
-        <img class="pure-img" width="150" ng-src="{{ item.photo }}">
-        <h2>{{ item.name }}</h2>
+      <td id="main-table-product-col">
+        <img class="pure-img product-image align-middle" width="150" ng-src="{{ item.photo }}">
+        <h2 class="product-name align-middle">{{ item.name }}</h2>
       </td>
-      <td>{{ item.price | currency }}</td>
-      <td>
+      <td class="align-center">{{ item.price | currency }}</td>
+      <td class="align-center">
         <button class="pure-button" ng-click="edit(item.id)">
           <i class="fa fa-pencil"></i>
         </button>
